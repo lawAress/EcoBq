@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBq</title>
+   <link rel="stylesheet" href="./style.css">
+   <script src="./scripts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="EcoBq Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#impacto">Impacto Ambiental</a></li>
+                    <li><a href="#proceso">Proceso</a></li>
+                    <li><a href="#datos">Datos</a></li>
+                    <li><a href="#preguntas">Preguntas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="carousel-container" id="inicio">
+        <div class="carousel">
+            <div class="carousel-item" style="background-image: url('./img/pexels-julia-m-cameron-6994833.jpg')">
+                <div class="carousel-content">
+                    <h2>Transforma tus prendas en acción ambiental</h2>
+                    <p>Cada prenda reciclada marca la diferencia. Únete al movimiento por un futuro más sostenible.</p>
+                    <button class="btn">Conoce más</button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./img/20240313PHT19312-cl.jpg')">
+                <div class="carousel-content">
+                    <h2>El verdadero costo de la moda</h2>
+                    <p>La industria textil es la segunda más contaminante del mundo. Cambiemos esto juntos.</p>
+                    <button class="btn">Ver impacto</button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./img/wardrobe-5961193_1280.jpg')">
+                <div class="carousel-content">
+                    <h2>Economía circular en acción</h2>
+                    <p>Convierte tus prendas en desuso en recursos valiosos para un planeta más saludable.</p>
+                    <button class="btn">Descubre cómo</button>
+                </div>
+            </div>
+            <div class="carousel-item last-item" style="background-image: url('./img/app.png')">
+                <div class="carousel-content">
+                    <h2>EcoBq tmabién en móviles</h2>
+                    <p>Puedes descargar nuestra app tanto en playStore como en appStore.</p>
+                    <button class="btn btn-bottom-left">Descargar App</button>
+                </div>
+            </div>
+        </div>
+    <button class="carousel-prev">&#10094;</button>
+    <button class="carousel-next">&#10095;</button>
+    <div class="carousel-nav">
+        <button class="carousel-dot active" data-index="0"></button>
+        <button class="carousel-dot" data-index="1"></button>
+        <button class="carousel-dot" data-index="2"></button>
+        <button class="carousel-dot" data-index="3"></button> <!-- Nuevo punto de navegación -->
+    </div>
+</div>
+
+    <section class="section" id="impacto">
+        <h2 class="section-title">El Impacto Ambiental de la Moda</h2>
+        
+        <div class="info-container">
+            <div class="info-text">
+                <h3>Un problema global en crecimiento</h3>
+                <p>El consumismo desmedido se ha convertido en una problemática de gran impacto ambiental. Uno de los sectores más afectados por esta cultura de consumo es la industria de la moda, específicamente el fast fashion. Este modelo de producción se basa en la fabricación masiva de prendas a bajo costo y en tiempos reducidos, promoviendo el consumo impulsivo y el descarte rápido de la ropa. </p>
+                <p>El ciclo de "moda rápida" ha acelerado el consumo, provocando que la vida útil de las prendas se acorte drásticamente, pasando de un promedio de 15-20 usos antes de ser descartadas.</p>
+            </div>
+            <div class="info-image" style="background-image: url('./img/Humana_Dia-Mundial-del-Reciclaje_1.jpg')"></div>
+        </div>
+        
+        <div class="info-container">
+            <div class="info-image" style="background-image: url('./img/4256-e1474373288138.jpg')"></div>
+            <div class="info-text">
+                <h3>Consumo de recursos naturales</h3>
+                <p>La producción textil consume cantidades enormes de recursos:</p>
+                <ul>
+                    <li>Según datos actualizados, aproximadamente el 10% de las emisiones globales de CO2 son causadas por esta industria.</li>
+                    <li>Consume cerca de 93 mil millones de metros cúbicos de agua al año (Fundación Ellen MacArthur, 2023; Fashion Revolution, 2023).</li>
+                    <li>Se estima que cada año se producen 150 mil millones de prendas, de las cuales aproximadamente el 30% nunca se venden y terminan siendo arrojadas a vertederos.</li>
+                    <li>El lavado de prendas genera alrededor de 500 mil toneladas de micro plásticos liberadas en los océanos afectando la biodiversidad marina.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">92 millones</div>
+                <div class="stat-text">Toneladas de residuos textiles generados cada año</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20%</div>
+                <div class="stat-text">De la contaminación global del agua proviene de la industria textil</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1.2 mil millones</div>
+                <div class="stat-text">Toneladas de CO₂ emitidas anualmente por la industria de la moda</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">85%</div>
+                <div class="stat-text">De los textiles terminan en vertederos cada año</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Pequeñas acciones, gran impacto</h2>
+            <p>Por cada prenda que reciclas, reduces 4.5 kg de CO₂, ahorras 2,700 litros de agua y evitas que textiles valiosos terminen en vertederos. Únete a las más de 10,000 personas que ya están haciendo la diferencia con sus prendas en desuso.</p>
+            <button class="cta-btn">¡Quiero participar!</button>
+        </div>
+    </section>
+
+    <section class="section" id="proceso">
+        <h2 class="section-title">Nuestro Proceso</h2>
+        
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Transformamos prendas en desuso en impacto positivo a través de un proceso sencillo y efectivo. Así es como tu ropa puede tener una segunda vida y contribuir a un planeta más saludable:</p>
+        
+        <div class="process-container">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-title">Identifica</div>
+                <p class="step-description">Reúne las prendas que ya no usas. Desde ropa desgastada hasta piezas en buen estado que ya no necesitas, todo puede tener una segunda vida.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-title">Registra</div>
+                <p class="step-description">Completa nuestro formulario simple para clasificar tus prendas según tipo, material y estado. Esto nos ayuda a determinar el mejor destino para cada pieza.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-title">Entrega</div>
+                <p class="step-description">Lleva tus prendas a un punto de recogida o solicita nuestro servicio a domicilio. Una vez en nuestras manos, comenzamos el proceso de transformación.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-title">Impacta</div>
+                <p class="step-description">Visualiza el impacto ambiental positivo de tu contribución a través de nuestro sistema de seguimiento. Recibirás actualizaciones sobre la nueva vida de tus prendas.</p>
+            </div>
+        </div>
+        
+        <div class="info-container">
+            <div class="info-text">
+                <h3>Destinos sostenibles para tus prendas</h3>
+                <p>Dependiendo del estado y composición de cada prenda, seguirán diferentes caminos:</p>
+                <ul>
+                    <li><strong>Reutilización directa:</strong> Las prendas en buen estado se donan a comunidades necesitadas o se venden en tiendas de segunda mano.</li>
+                    <li><strong>Upcycling:</strong> Transformamos prendas en nuevos productos con mayor valor añadido, como accesorios, bolsos o elementos decorativos.</li>
+                    <li><strong>Reciclaje de fibras:</strong> Las prendas desgastadas se procesan para extraer fibras que serán utilizadas en nuevos textiles o en otras industrias.</li>
+                    <li><strong>Compostaje:</strong> Las prendas de materiales naturales y biodegradables pueden convertirse en compost que nutre la tierra.</li>
+                </ul>
+            </div>
+            <div class="info-image" style="background-image: url('./img/pexels-gustavo-fring-7156168.jpg')"></div>
+        </div>
+    </section>
+
+    <section class="section" id="datos">
+        <h2 class="section-title">El Impacto de Tu Participación</h2>
+        
+        <div class="info-container">
+            <div class="info-image" style="background-image: url('./img/arc_217534_g.webp')"></div>
+            <div class="info-text">
+                <h3>Beneficios ambientales medibles</h3>
+                <p>Cuando reciclas tus prendas a través de nuestro programa, generas beneficios cuantificables:</p>
+                <ul>
+                    <li>Por cada kilogramo de ropa reciclada, se evita la emisión de 3.6 kg de CO₂.</li>
+                    <li>Una camiseta reciclada ahorra 2,700 litros de agua, suficiente para que una persona beba durante 2.5 años.</li>
+                    <li>Reciclar 1 tonelada de textiles equivale a retirar 5 automóviles de la circulación durante un año.</li>
+                    <li>Cada prenda reciclada reduce la presión sobre vertederos y disminuye la necesidad de producir nuevas fibras.</li>
+                </ul>
+                <p>Hasta la fecha, nuestra comunidad ha logrado reciclar más de 50 toneladas de textiles, equivalente a ahorrar 135 millones de litros de agua y evitar 180 toneladas de emisiones de CO₂.</p>
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">15,000+</div>
+                <div class="stat-text">Participantes activos en nuestro programa</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-text">Toneladas de textiles reciclados</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-text">Organizaciones beneficiadas</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">180</div>
+                <div class="stat-text">Toneladas de CO₂ evitadas</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="preguntas">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">¿Qué tipo de prendas puedo reciclar?</div>
+                <div class="accordion-content">
+                    <p>Aceptamos prácticamente todo tipo de prendas y textiles del hogar, independientemente de su estado: ropa, zapatos, accesorios, ropa de cama, cortinas, etc. Las prendas pueden estar desgastadas, rotas o manchadas. Lo importante es que estén limpias y secas.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">¿Cómo puedo entregar mis prendas?</div>
+                <div class="accordion-content">
+                    <p>Tienes varias opciones:</p>
+                    <ul>
+                        <li>Entregar en nuestros puntos de recogida (consulta el mapa en nuestra web)</li>
+                        <li>Solicitar recogida a domicilio para cantidades superiores a 5kg</li>
+                        <li>Enviar por correo postal usando nuestra etiqueta prepagada</li>
+                        <li>Participar en nuestras campañas de recogida en empresas y colegios</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">¿Qué ocurre con mis prendas una vez las entrego?</div>
+                <div class="accordion-content">
+                    <p>Seguimos un proceso meticuloso de clasificación basado en el tipo de prenda, material y estado. Aproximadamente:</p>
+                    <ul>
+                        <li>45% se reutilizan como prendas de segunda mano</li>
+                        <li>30% se transforman en nuevos productos (upcycling)</li>
+                        <li>20% se reciclan para obtener fibras o materiales</li>
+                        <li>5% (materiales no reciclables) se utilizan para generar energía</li>
+                    </ul>
+                    <p>Si registras tus prendas en nuestra plataforma, podrás recibir información sobre el destino específico de tu donación.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">¿Recibo alguna compensación por mis prendas?</div>
+                <div class="accordion-content">
+                    <p>Sí, ofrecemos varias formas de reconocimiento por tu contribución:</p>
+                    <ul>
+                        <li>Puntos de impacto que puedes canjear por descuentos en marcas sostenibles asociadas</li>
+                        <li>Certificado de impacto ambiental detallando el CO₂ y agua ahorrados</li>
+                        <li>Para grandes cantidades (empresas o eventos), ofrecemos reportes personalizados de sostenibilidad</li>
+                    </ul>
+                    <p>Nuestro objetivo principal es maximizar el impacto positivo ambiental y social, no económico.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">¿Cómo puedo involucrarme más allá de reciclar mis prendas?</div>
+                <div class="accordion-content">
+                    <p>¡Hay muchas formas de amplificar tu impacto!</p>
+                    <ul>
+                        <li>Convertirte en embajador y organizar eventos de recogida en tu comunidad</li>
+                        <li>Participar como voluntario en nuestros centros de clasificación</li>
+                        <li>Tomar parte en nuestros talleres de upcycling y aprender a transformar prendas</li>
+                        <li>Proponer a tu empresa o centro educativo que se una a nuestro programa corporativo</li>
+                        <li>Difundir nuestro mensaje en redes sociales y entre tus contactos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-form" id="contacto">
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input type="text" id="subject" name="subject" placeholder="Ingresa el asunto" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Enviar mensaje</button>
+            </div>
+        </form>
+    </div>
+</body>
+
