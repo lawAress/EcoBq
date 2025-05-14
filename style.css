@@ -38,9 +38,11 @@ header {
 }
 
 .logo img {
-    width: 150px; /* Ajusta el tamaño del logo */
+    width: 150px;
     height: auto;
-    margin-left: -200px;
+    margin-left: 0; 
+    max-width: 100%; 
+    object-fit: contain; 
 }
 
 nav ul {
