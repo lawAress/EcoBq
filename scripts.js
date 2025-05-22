@@ -68,53 +68,52 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
-    // Agregar desplazamiento suave a los enlaces del navbar
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            
-            // Verificar que el elemento existe
-            if (targetId !== '#' && document.querySelector(targetId)) {
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Ajuste para el header fijo
-                    behavior: 'smooth' // Esto crea la animación suave
-                });
-                
-                // Actualizar la URL sin recargar la página
-                history.pushState(null, null, targetId);
+
+    function revealSectionsOnScroll() {
+        document.querySelectorAll('.section').forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.85) {
+                section.classList.add('visible');
             }
         });
-    });
-});
 
-function revealSectionsOnScroll() {
-    document.querySelectorAll('.section').forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.85) {
-            section.classList.add('visible');
-        }
-    });
+        
 }
-window.addEventListener('scroll', revealSectionsOnScroll);
-window.addEventListener('DOMContentLoaded', revealSectionsOnScroll);
-
-// Desplazamiento suave personalizado para los enlaces del navbar
 document.querySelectorAll('nav ul li a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
         if (targetId.length > 1 && document.querySelector(targetId)) {
             e.preventDefault();
             const target = document.querySelector(targetId);
-            window.scrollTo({
-                top: target.offsetTop - 80, // Ajusta según la altura de tu header fijo
-                behavior: 'smooth'
-            });
+            const headerOffset = 80;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            smoothScrollTo(targetPosition, 1200); // 1200ms = 1.2 segundos
         }
     });
 });
+
+function smoothScrollTo(target, duration) {
+    const start = window.pageYOffset;
+    const distance = target - start;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, start, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+        // easeInOutQuad
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+    });
 

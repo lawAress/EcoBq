@@ -101,6 +101,10 @@ nav ul li a.active {
     color: var(--primary-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .btn {
     background-color: var(--primary-color);
     color: white;
