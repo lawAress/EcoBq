@@ -79,10 +79,26 @@ nav ul li a {
     color: white;
     font-weight: 500;
     transition: color 0.3s;
+    position: relative;
 }
 
-nav ul li a:hover {
-    color: var(--secondary-color);
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a.active {
+    color: var(--primary-color);
 }
 
 .btn {
@@ -411,8 +427,24 @@ nav ul li a:hover {
 }
 
 .accordion-content.active {
-    padding: 20px;
+    padding: 20px 30px;
     max-height: 500px;
+}
+
+.accordion-content p,
+.accordion-content ul {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.accordion-content ul {
+    padding-left: 20px;
+}
+
+.options-list {
+    list-style: none;
+    padding-left: 10px;
+    margin-left: 10px; 
 }
 
 .accordion-header::after {
@@ -589,4 +621,16 @@ footer {
         width: 120px;  /* Reduce el tamaño del logo en móvil */
         height: auto;
     }
+
+    .footer-logo {
+        padding-left: 0;  /* Elimina el padding izquierdo en móvil */
+        text-align: center;  /* Centra el contenido */
+        width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    .footer-logo img {
+        width: 150px;  /* Reduce aún más el tamaño del logo en el footer para móvil */
+        margin: 0 auto 20px;  /* Centra la imagen y mantiene el espacio inferior */
+    }
 }
+
